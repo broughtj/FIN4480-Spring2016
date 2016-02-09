@@ -1,0 +1,270 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{longtable,booktabs}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\date{}
+
+\begin{document}
+
+\section{Finance 4480 - Derivatives
+Markets}\label{finance-4480---derivatives-markets}
+
+\begin{itemize}
+ \itemsep1pt\parskip0pt\parsep0pt
+ \item \textbf{Instructor:} Tyler J. Brough
+ \item \textbf{Email:} \href{mailto:tyler.brough@aggiemail.usu.edu}{\nolinkurl{tyler.brough@aggiemail.usu.edu}}
+ \item \textbf{Office:} BUS 605
+ \item \textbf{Course Dates:} January 12 - April 28, 2016
+ \item \textbf{Course Room:} \href{https://www.usu.edu/map/index.cfm?id=32}{ENGR 304}
+ \item \textbf{Course Time:} TR 7:30 - 8:45 AM
+ \item \textbf{Course Website:} \href{http://broughtj.github.io/teaching/FIN4480/}{http://broughtj.github.io/teaching/FIN4480/}  
+ \item \textbf{Office hours:} TBD
+\end{itemize}
+
+\subsection{Course Description}\label{course-description}
+
+This course is an introduction to derivative securities, the markets in
+which they trade, theoretical models for obtaining rational prices for
+them, and their applications in hedging and speculation. Derivatives are
+an advanced finance topic. At one time, a course in derivatives was
+considered a specialized elective, but is now considered mandatory in
+any finance major. Our topic is by nature an analytical one that will
+require a good deal of mathematics and quantitative reasoning. However,
+we will seek a balance between the theoretical presentation of the
+material and a practical implementation. The skill set necessary to
+effectively implement modern financial derivative pricing models is a
+crucial one to have for those seeking a job in the finance industry.
+
+\subsection{Course Objectives}\label{course-objectives}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Learn fundamental principles and theories.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Learn what derivatives are and their basic vocabulary.
+  \item
+    Learn how derivatives markets operate and the institutional features
+    of the markets in which they trade.
+  \item
+    Learn the principles of modern financial economic theory explaining
+    how derivative securities are priced.
+  \end{itemize}
+\item
+  Learn to apply course materials
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Learn a framework for corporations, individuals, and other
+    organizations to determine how and when to use derivative securities
+    for hedging and speculation.
+  \item
+    Learn to implement derivative pricing models for applications in
+    hedging and speculation.
+  \end{itemize}
+\item
+  Developing specific skills, competencies and points of view needed by
+  professionals in the finance industry and in academic finance.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Learn the basics of \href{https://www.python.org/}{Python}
+    programming for purposes of financial modeling.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Python Programming}\label{python-programming}
+
+One unique objective of this course is to learn the basics of Python
+programming for financial modeling. I have found that programming
+financial models is an extremely helpful pedagogical tool for learning
+financial theory. In addition, I have found that my past students have
+benefited very much from learning some basic programming skills.
+
+The version of Python that we will be using is the following:
+
+\begin{itemize}
+ \item The \href{https://store.continuum.io/cshop/anaconda/}{Anaconda}
+  edition of Python by Continuum Analytics. This will have everything
+  that we will need pre-installed. Please install the version that comes
+  with Python 3. It is completely free.
+\end{itemize}
+
+Python is a very good choice for a programming language for this course.
+As a programming language, Python is fairly easy to learn and can be put
+to productive use very quickly. Python is quickly becoming the de facto
+scripting language for scientific computing, and is widely used in the
+finance industry. Programming will be used as a tool to reinforce
+learning about derivatives and how they are priced, it will not be the
+main focus of the course. The amount of programming that you will be
+required to learn is quite modest. Nevertheless, I cannot emphasize
+enough how important these skills are for a student of finance to be
+competitive in the labor market.
+
+\subsubsection{Linux/UNIX}\label{linuxunix}
+
+I also \textbf{highly} recommend that you learn a little about the UNIX
+command line as well. I will be covering some basic material about UNIX
+in the course, and will use if heavily myself. While I encourage this,
+your grade will not depend on this material at all.
+But I think you will find it a very helpful addition to your skill set.
+
+\subsection{Textbook}\label{textbook}
+
+The \emph{required} textbook for the course is
+\emph{\href{http://goo.gl/G5O2fx}{Options, Futures and Other Derivatives 9th Edition}}
+by John C. Hull.
+
+In addition, I will follow the book
+\emph{\href{http://goo.gl/iipcHA}{Python Programming for the Absolute Beginner 3rd Edition}}, in my
+presentation of the Python programming language. This book is
+\textbf{not} required, but it is \textbf{strongly suggested} for those
+who have never programmed before. 
+
+While the first book doesn't have a very serious subject (simple
+computer games) the programming taught is \emph{serious} programming and
+it is taught in a way that takes away some of the intimidation
+associated with other beginning programming books. I highly recommend
+it!
+
+\subsection{Grading}\label{grading}
+
+The grade that you will earn will be determined from your ranking in the
+class based on the weighted total points accumulated on class
+preparation and participation, a class project, as well as on exams.
+There is no predetermined percentage of the class that will earn an A or
+that will fail. If you all do excellent work you will all earn
+exceptional grades. The weights given to each part of the class are as
+follows:
+
+\subsubsection{Class Preparation \& Participation
+(20\%)}\label{class-preparation-participation-20}
+
+This portion of your grade will be determined by your preparation for
+class lectures, your participation in class discussions and the
+completion of homework assignments. Homework assignments will be given
+approximately every Thursday and will be due a week later. I will drop
+your lowest assignment and replace it with the average of the others if
+you hand all assignments in with full effort. Participation in class is
+crucial!
+
+\subsubsection{Class Projects (40\%)}\label{class-projects-40}
+
+This portion of your grade will be determined by a class project. The
+project will consist of a computational modeling exercise. You can work
+in teams of two. Potential topics will be discussed in class, but here
+are some suggestions:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Monte Carlo pricing of an exotic option such as Asian option
+\item
+  Monte Carlo estimation of hedging strategies
+\item
+  Monte Carlo pricing of a swaption
+\item
+  Monte Carlo pricing of an option subject to stochastic volatility
+\item
+  Monte Carlo pricing of an option subject to price jumps
+\item
+  Monte Carlo evaluation of the Stutzer pricing methodology
+\end{itemize}
+
+\subsubsection{Exams (40\%)}\label{exams-40}
+
+This portion of your grade will be determined by your performance on the
+midterm and final exams. I will calculate your grade two ways:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  The total of your two exam scores
+\item
+  Drop the midterm exam and place all of the weight on the final
+\end{itemize}
+
+Your grade will be determined by which ever method gives you the highest
+total points.
+
+\subsection{Format and Attendance}\label{format}
+
+This course is designed to be as interactive and hands-on during our face-to-face class time as possible. As much as possible
+I will seek to present the dense textbook material in online video lectures. You will watch these on your own time out of class.
+We will use class time to dig deeper into the material, solve problems, and go over homework problems. This puts a strong burden
+on each student to come to course prepared to participate in class. 
+
+To make this work in practice class attendance will be mandatory. To enforce this I will collect a list of questions from each of you
+at the beginning of class. Often I will use those questions to decide upon how we will spend class time. 
+
+\newpage
+\subsection{Topics (Subject to Change)}\label{topics-subject-to-change}
+
+Please see the course website and the course Google Drive folder for a spreadsheet with
+and updated schedule.
+
+
+Important Dates:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{Feb 16} - Monday Schedule
+\item
+  \textbf{Mar 7 - 11} - Spring Break
+\item
+  \textbf{Apr 28} - Last Day of Classes
+\item
+  \textbf{Apr 3} - Final Exam
+\end{itemize}
+
+\end{document}
